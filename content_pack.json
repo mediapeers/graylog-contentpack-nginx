@@ -258,6 +258,19 @@
       "condition_type" : "REGEX",
       "condition_value" : "^\\S+\\s+nginx:"
     }, {
+      "title" : "Real user IP address",
+      "type" : "REGEX",
+      "configuration" : {
+        "regex_value" : "real_ip=(.+?)\\|"
+      },
+      "converters" : [ ],
+      "order" : 10,
+      "cursor_strategy" : "COPY",
+      "target_field" : "real_ip",
+      "source_field" : "message",
+      "condition_type" : "REGEX",
+      "condition_value" : ".+real_ip=.+"
+    }, {
       "title" : "Connection ID",
       "type" : "REGEX",
       "configuration" : {
@@ -314,7 +327,7 @@
       "converters" : [ ],
       "order" : 13,
       "cursor_strategy" : "COPY",
-      "target_field" : "message",
+      "target_field" : "message_content",
       "source_field" : "message",
       "condition_type" : "REGEX",
       "condition_value" : "^\\S+\\s+nginx:"
