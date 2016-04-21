@@ -1,6 +1,6 @@
 # Graylog content pack for nginx
 
-Modified fork for showing real IP too (from `X-Forwarded-For` header), for typical setups when behind a loadbalancer.
+**Modified fork for showing real IP too (from `X-Forwarded-For` header), for typical setups when behind a loadbalancer.**
 
 This content pack will create two inputs for the nginx `error_log` and `access_log`. Extractors are applied to effectively read the most important data into message fields. You will be able to do searches for all requests of a given remote IP, all requests that were answered with a HTTP 400 or just all requests that were slow.
 
